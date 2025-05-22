@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "fe5b3d71-ed64-4a09-a3d4-ed0db1b77da5",
+		"name": "Namehnegar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42544422"
+	},
+	"item": [
+		{
+			"name": "Excel Properties",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "excelFile",
+							"type": "file",
+							"src": "/C:/Users/MEHR GOSTAR/Desktop/namenegar/namenegar/example/exampleExcel.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{HOST}}/api/namehnegar/v1/excel-properties",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"namehnegar",
+						"v1",
+						"excel-properties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate word document from excel",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "excelFile",
+							"type": "file",
+							"src": "/C:/Users/MEHR GOSTAR/Desktop/namenegar/namenegar/example/exampleExcel.xlsx"
+						},
+						{
+							"key": "wordTemplate",
+							"type": "file",
+							"src": "/C:/Users/MEHR GOSTAR/Desktop/namenegar/namenegar/example/exampleWord.docx"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{HOST}}/api/namehnegar/v1/word/generate",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"namehnegar",
+						"v1",
+						"word",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Words file List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/namehnegar/v1/word/files/list",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"namehnegar",
+						"v1",
+						"word",
+						"files",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download All words file",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/namehnegar/v1/word/files/list/download",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"namehnegar",
+						"v1",
+						"word",
+						"files",
+						"list",
+						"download"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
