@@ -69,7 +69,7 @@ public class NameNegarController {
         }
     }
 
-
+    // Downlad a word file
     @GetMapping("/word/download-word")
     public ResponseEntity<Resource> downloadWordFile(@RequestParam String filename) {
         try {
@@ -92,7 +92,7 @@ public class NameNegarController {
         }
     }
 
-
+    // Words File list
     @GetMapping("/word/files/list")
     public List<String> listFilesWithPasswordSuffix() {
         return nameNegarService.filesList();
@@ -119,6 +119,8 @@ public class NameNegarController {
 
         return result;
     }
+
+    // Download all word files
     @GetMapping("/word/files/list/download")
     public ResponseEntity<byte[]> downloadAllFiles() {
         return nameNegarService.downloadAllFiles();
